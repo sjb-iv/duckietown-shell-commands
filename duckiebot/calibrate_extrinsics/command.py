@@ -88,7 +88,7 @@ Calibrate:
                 "{}\nPlace the Duckiebot in a lane and press ENTER.".format("*" * 20)
             )
             log_file = "out-pipeline-%s-%s" % (hostname, timestamp)
-            rosrun_params = "-o /data/{0} > /data/{0}.log".format(log_file)
+            rosrun_params = "-o /data/{0}".format(log_file)
             ros_pkg = "complete_image_pipeline single_image_pipeline"
             start_command = "rosrun {0} {1}".format(ros_pkg, rosrun_params)
             dtslogger.info("Running command: {}".format(start_command))
