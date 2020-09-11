@@ -64,7 +64,7 @@ Calibrate:
             )
         )
         log_file = "out-calibrate-extrinsics-%s-%s" % (hostname, timestamp)
-        rosrun_params = "-o /data/{0} > /data/{0}.log".format(log_file)
+        rosrun_params = "-o /data/{0}".format(log_file)
         ros_pkg = "complete_image_pipeline calibrate_extrinsics"
         start_command = "rosrun {0} {1}".format(ros_pkg, rosrun_params)
         dtslogger.info("Running command: {}".format(start_command))
